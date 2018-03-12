@@ -176,17 +176,13 @@ textarea {
     box-shadow: 5px 8px #e9e9e9;
     font-family: Arial;
 }
-.infosection{
-    margin: 0 auto;
-    width:1200px;
-}
-.infosection h1{
-    text-align: center;
+
+.runningman{
     font-size:2.5rem;
     font-weight: lighter;
     margin: 0 auto;
-    max-width: 800px;
     padding-top: 30px;
+    width: 300px;
 }
 .box{
     width: 270px;
@@ -210,6 +206,7 @@ textarea {
     font-size: 0.8rem;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: center;
 }
 .box p, .boxgreen p{
     text-align: center;
@@ -221,8 +218,96 @@ textarea {
 .boxes{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+    width:1200px;
 }
+@media screen and (max-width: 1200px){
+    .topheader{
+        margin: 0 auto;
+        width:750px;
+    }
+    .items {
+        margin: 0 auto;
+        width: 750px;
+    }
+    .boxes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 570px;
+    }
+    .box{
+        margin: 40px 0px 10px 20px;
+    }
 
+}
+@media screen and (max-width: 740px){
+    .topheader{
+        margin: 0 auto;
+        width:520px;
+    }
+
+    .items {
+        margin: 0 auto;
+        width: 520px;
+    }
+    .boxes{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 570px;
+    }
+    .box{
+        margin: 40px 5px 20px 135px;
+
+    }
+}
+@media screen and (max-width: 500px){
+    .topheader{
+
+        margin: 0 auto;
+        width:300px;
+    }
+    .phone_mail_section p {
+        font-size: 8px;
+        margin-right: 0px;
+    }
+    .items {
+        margin: 0 auto;
+        width: 300px;
+    }
+    .boxes{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 300px;
+    }
+    .box{
+        margin: 40px 5px 20px 85px;
+
+    }
+    .logo h1{
+        font-size: 1em;
+        margin-top: 45px;
+        width:100px;
+    }
+    .menubarlinks{
+        display:flex;
+    }
+    .menubarlinks a{
+        margin-left: 0px;
+    }
+    .infosection h1{
+        font-size:1.8em;
+        margin-left: 100px;
+    }
+    .box{
+        margin-left: 20px;
+        width: 280px;
+    }
+    .box h1{
+        margin-left: 0px;
+    }
+
+
+}
 
 
 
@@ -234,7 +319,6 @@ textarea {
 
 .downloadnow{
     margin: 0 auto;
-    width:1200px;
     padding-top: 200px;
     text-align: center;
     height: 200px;
@@ -308,6 +392,9 @@ textarea {
         margin-top: 0;
         opacity: 0;
     }
+}
+
+
 }
 /* ------------------------------------------Menubar Section----------------------------------*/
 
