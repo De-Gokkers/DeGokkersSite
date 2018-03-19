@@ -264,6 +264,16 @@ button {
     justify-content: space-between;
 }
 
+.respondmessage{
+    font-size: 40px;
+    font-family: arial;
+    background-color: #ffffff;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+}
 /*-------------------------------------------INFO Section--------------------------------------*/
 .feature{
     background-color:#f2f2f2;
@@ -409,6 +419,7 @@ button {
 .downloadnow1{
     /* background: linear-gradient(to bottom right, #ffeb99,#fff ); */
     background: radial-gradient(circle, #fff,  #FF0000);
+    padding-top: 20px;
 }
 
 .downloadnow{
