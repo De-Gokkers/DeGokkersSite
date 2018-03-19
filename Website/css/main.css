@@ -96,6 +96,95 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/* ------------------------------------------Login----------------------------------*/
+.boxp{
+    margin-top:30px;
+    font-family: Arial;
+}
+.button {
+    font-size: 1em;
+    color: #000;
+    padding:7px 20px;
+    text-decoration: none;
+}
+.button:hover {
+    color:#FF0000;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: thin;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: linear-gradient(to bottom right , #fff, #fff, #fff, #FF0000 );
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #000;
+    font-family: Arial;
+}
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 250ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+.popup .close:hover {
+    color: #FF0000;
+}
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+    /*-------------------------------------------------Form----------------------------------------*/
+/* Full-width inputs */
+input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+button {
+    background-color: #FF0000;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 0px 8px 130px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+.container{
+    font-family: Arial;}
+
+
+/*-------------------------------------------------*/
+
 .header{
     background-color: #333;
     background-size: 100%;
@@ -169,6 +258,21 @@ textarea {
     border-style: solid;
     border-radius: 15px;
     border-width: thin;
+}
+.boxesp{
+    display:flex;
+    justify-content: space-between;
+}
+
+.respondmessage{
+    font-size: 40px;
+    font-family: arial;
+    background-color: #ffffff;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
 }
 /*-------------------------------------------INFO Section--------------------------------------*/
 .feature{
@@ -315,6 +419,7 @@ textarea {
 .downloadnow1{
     /* background: linear-gradient(to bottom right, #ffeb99,#fff ); */
     background: radial-gradient(circle, #fff,  #FF0000);
+    padding-top: 20px;
 }
 
 .downloadnow{
@@ -385,6 +490,7 @@ textarea {
     0.001% {
         margin-top: -15px;
         opacity: 0;
+    }
     50% {
         opacity: 1;
     }
@@ -395,8 +501,7 @@ textarea {
 }
 
 
-}
-/* ------------------------------------------Menubar Section----------------------------------*/
+
 
 
 

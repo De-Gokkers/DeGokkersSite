@@ -41,23 +41,54 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="downloadnow1">
+            <div class="respondmessage">
+                <?php
+                if ( isset($_GET['message']) ) {
+                    echo $_GET['message'];
+
+                }
+                ?>
+            </div>
             <div class="downloadnow">
-                <a href="app/DeGokkers.exe" class="buttonDownload" download>Download now!</a>
+                <?php
+
+                     if(!isset($_SESSION['user_id']))
+                    {
+                        echo '<a href="app/DeGokkers.exe" class="buttonDownload" download>Download now!</a>';
+                     }
+                    else
+                     {
+                     echo 'first login!';
+                        }
+                     ?>
+
             </div>
         </div>
-
         <div class="menubar">
             <div class="items">
                 <div class="logo">
                     <h1>De <span>G</span>okkers</h1>
                 </div>
-                <div class="menubarlinks">
-                    <a class="cool-link" href="#" alt="contacticon">About</a>
-                    <a href="#" alt="contacticon">Contact</a>
-                </div>
+                    <div class="boxp">
+                        <a class="button" href="#popup2">Register</a>
+                    </div>
+                    <div id="popup2" class="overlay">
+                        <div class="popup">
+                            <h2>Register</h2>
+                            <form action="includes/signup.inc.php" method="post">
+                                <div class="container">
+                                    <input type="email" name="email" placeholder="Email">
+                                    <input type="password" name="password" placeholder="Password">
+                                    <input type="submit" name="submit">
+                                </div>
+                            </form>
+                            <a class="close" href="#">&times;</a>
+                            <div class="content">
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
         <div class="feature">
@@ -91,13 +122,22 @@
                 </div>
             </div>
         </div>
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Here i am</h2>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    Thank to pop me out of that button, but now i'm done so you can close this window.
+                </div>
+            </div>
+        </div>
 
 
 
 
 
 
-        
+
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
