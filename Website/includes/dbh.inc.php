@@ -2,7 +2,8 @@
 
 
 try{
-    $db=new PDO("mysql:host=localhost;dbname=loginsystem","root","");
+    $conn=new PDO("mysql:host=localhost;dbname=gokkers","root","");
+
 
 } catch(PDOException $e){
     ("Oops, something went wrong :(");
