@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<?php
+    require('session.php');
+?>
 <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
@@ -79,7 +82,7 @@
         <div id="popup2" class="overlay">
             <div class="popup">
                 <h2>Register</h2>
-                <form action="includes/signup_inc.php" method="post">
+                <form action="includes/login.php" method="post">
                     <div class="container">
                         <input type="email" name="email" placeholder="Email" required>
                         <input type="text" name="username" placeholder="username" required>
@@ -95,7 +98,7 @@
         <div id="popup1" class="overlay">
             <div class="popup">
                 <h2>Here i am</h2>
-                <form action="includes/login_inc.php" method="post">
+                <form action="includes/login.php" method="post">
                     <div class="container">
                         <input type="text" name="username" id="username" placeholder="Username" required>
                         <input type="password" name="password" id="password" placeholder="Password" required>
