@@ -162,7 +162,15 @@ textarea {
 }
     /*-------------------------------------------------Form----------------------------------------*/
 /* Full-width inputs */
-input[type=email], input[type=password] {
+.container input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+input[type=email], input[type=password]{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -413,7 +421,10 @@ button {
 
 }
 
-
+.video video{
+    margin: 0 auto;
+    display: flex;
+}
 
 /* ------------------------------------------Download Section----------------------------------*/
 .downloadnow1{

@@ -54,13 +54,14 @@
             <div class="downloadnow">
                 <?php
 
-                     if(!isset($_SESSION['user_id']))
+                     if(isset($_SESSION))
                     {
-                        echo '<a href="app/DeGokkers.exe" class="buttonDownload" download>Download now!</a>';
+                        echo '<button type="button" enabled>Download</button></a>';
+                        echo 'Hi, ' . $_SESSION["username"];
                      }
                     else
                      {
-                     echo 'first login!';
+                         echo '<button type="button" disabled>First login</button></a>';
                         }
                      ?>
 
@@ -73,14 +74,16 @@
                 </div>
                     <div class="boxp">
                         <a class="button" href="#popup2">Register</a>
+                        <a class="button" href="#popup1">Login</a>
                     </div>
                     <div id="popup2" class="overlay">
                         <div class="popup">
                             <h2>Register</h2>
-                            <form action="includes/signup.inc.php" method="post">
+                            <form action="includes/signup_inc.php" method="post">
                                 <div class="container">
-                                    <input type="email" name="email" placeholder="Email">
-                                    <input type="password" name="password" placeholder="Password">
+                                    <input type="email" name="email" placeholder="Email" required>
+                                    <input type="text" name="username" placeholder="username" required>
+                                    <input type="password" name="password" placeholder="Password" required>
                                     <input type="submit" name="submit">
                                 </div>
                             </form>
@@ -89,6 +92,22 @@
                             </div>
                         </div>
                     </div>
+                <div id="popup1" class="overlay">
+                    <div class="popup">
+                        <h2>Here i am</h2>
+                        <form action="includes/login_inc.php" method="post">
+                            <div class="container">
+                                <input type="text" name="username" id="username" placeholder="Username" required>
+                                <input type="password" name="password" id="password" placeholder="Password" required>
+                                <input type="submit" name="login" >
+                            </div>
+                        </form>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="feature">
@@ -125,11 +144,19 @@
         <div id="popup1" class="overlay">
             <div class="popup">
                 <h2>Here i am</h2>
+
                 <a class="close" href="#">&times;</a>
                 <div class="content">
                     Thank to pop me out of that button, but now i'm done so you can close this window.
                 </div>
             </div>
+        </div>
+        <div class="video">
+            <video width="600" height="400" controls>
+                <source src="FUNNY BABY VIDEOS 7.mp4" type="video/mp4">
+                <source src="FUNNY BABY VIDEOS 7.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
         </div>
 
 
